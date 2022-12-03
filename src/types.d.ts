@@ -4,3 +4,9 @@ export interface QuoteType {
   author: string;
   text: string;
 }
+
+export interface QuoteFormType {
+  category: string;
+  author: string;
+  text: string;
+}

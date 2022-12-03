@@ -26,9 +26,9 @@ const Quote: React.FC<Props> = ({quotes}) => {
         <div>
           <div className="d-flex justify-content-between border-bottom border-dark fs-4 mb-3">
             <p className="card-text"><b>Author:</b> {quotes.author}</p>
-            <p className="card-text"><b>Category:</b>{quotes.category}</p>
+            <p className="card-text"><b>Category:</b> {quotes.category}</p>
           </div>
-          <p className="card-text mb-3"><b>Message:</b> {quotes.text}</p>
+          <p className="card-text mb-3"><b>Quote:</b> {quotes.text}</p>
         </div>
         <button className="btn btn-danger" onClick={remove}>Delete</button>
       </div>
