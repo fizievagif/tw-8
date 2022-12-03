@@ -60,7 +60,7 @@ const QuotesForm: React.FC<Props> = ({currentPost}) => {
         >
           <option value="" disabled>Select category</option>
           <option value="star-wars">Star Wars</option>
-          <option value="famous-people">famous-people</option>
+          <option value="famous-people">Famous people</option>
           <option value="saying">Saying</option>
           <option value="humour">Humour</option>
           <option value="motivational">Motivational</option>
