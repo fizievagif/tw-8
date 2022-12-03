@@ -1,8 +1,25 @@
 import React from 'react';
+import Home from "./Containers/Home/Home";
+import {Route, Routes} from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
+import NewQuote from "./Containers/NewQuote/NewQuote";
 
 function App() {
   return (
     <div>
+      <header>
+        <Navbar/>
+      </header>
+      <main className="container">
+        <Routes>
+          <Route path="/" element={(
+            <Home/>
+          )}/>
+          <Route path="/submit" element={(
+            <NewQuote/>
+          )}/>
+        </Routes>
+      </main>
     </div>
   );
 }
