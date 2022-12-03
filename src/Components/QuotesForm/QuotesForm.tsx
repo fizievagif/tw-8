@@ -3,12 +3,20 @@ import {QuoteFormType} from "../../types";
 import {useNavigate, useParams} from "react-router-dom";
 import axiosApi from "../../axiosApi";
 
-const QuotesForm = () => {
-  const [quote, setQuote] = useState<QuoteFormType>({
+interface Props {
+  currentPost?: QuoteFormType;
+}
+
+const QuotesForm: React.FC<Props> = ({currentPost}) => {
+  const initialState = currentPost ? {
+    ...currentPost,
+  } : {
     category: '',
     author:  '',
     text: ''
-  });
+  }
+
+  const [quote, setQuote] = useState<QuoteFormType>(initialState);
 
   const {id} = useParams();
   const navigate = useNavigate();

@@ -14,9 +14,9 @@ const Quotes = () => {
 
       if (response.data !== null || undefined) {
         const quotesKeys = Object.keys(response.data).map(key => {
-          const postBlog = response.data[key];
-          postBlog.id = key;
-          return postBlog;
+          const quoteBlog = response.data[key];
+          quoteBlog.id = key;
+          return quoteBlog;
         });
         setQuotes(quotesKeys);
       }

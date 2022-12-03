@@ -1,6 +1,6 @@
 import React from 'react';
 import {QuoteType} from "../../types";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import axiosApi from "../../axiosApi";
 
 interface Props {
@@ -31,6 +31,9 @@ const Quote: React.FC<Props> = ({quotes}) => {
           <p className="card-text mb-3"><b>Quote:</b> {quotes.text}</p>
         </div>
         <button className="btn btn-danger" onClick={remove}>Delete</button>
+        <Link
+          className="btn btn-warning text-white mx-3"
+          to={'/edit/' + quotes.id}>Edit</Link>
       </div>
     </div>
   );

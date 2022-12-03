@@ -3,6 +3,7 @@ import Home from "./Containers/Home/Home";
 import {Route, Routes} from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import NewQuote from "./Containers/NewQuote/NewQuote";
+import Edit from "./Containers/Edit/Edit";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         <Routes>
           <Route path="/" element={(
             <Home/>
+          )}/>
+          <Route path="/edit/:id" element={(
+            <Edit/>
           )}/>
           <Route path="/submit" element={(
             <NewQuote/>
